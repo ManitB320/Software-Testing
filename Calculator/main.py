@@ -27,13 +27,13 @@ def append_pi():
 # Window setup
 window = ttk.Window()
 window.title("Calculator")
-window.geometry('600x800')  # Resize window to fit properly
-window.configure(bg="#50C878")
+window.geometry('600x800') 
+window.configure(bg="#4A235A")
 
 # Entry field
 entry_var = tk.StringVar()
-entry = ttk.Entry(window, font=("Arial", 32), justify="right", textvariable=entry_var)
-entry.pack(fill="x", padx=10, pady=20)  # Adjust padding for better alignment
+entry = ttk.Entry(window, font=("comic-sans", 32), justify="right", textvariable=entry_var)
+entry.pack(fill="x", padx=10, pady=20)  
 
 # Button frame
 button_frame = ttk.Frame(window)
@@ -48,9 +48,9 @@ buttons = [
     ('%', 4, 0), ('0', 4, 1), ('.', 4, 2), ('=', 4, 3),
 ]
 
-# Define a style with larger font and button color
+# Define a style for button
 style = ttk.Style()
-style.configure("Custom.TButton", font=("comic-sans",16), foreground="black", background="#AFE1AF", borderwidth = 0)
+style.configure("Custom.TButton", font=("comic-sans",16), foreground="black", background="#884EA0", borderwidth = 0)
 
 # Add buttons to the grid
 for (text, row, col) in buttons:
@@ -70,7 +70,7 @@ for (text, row, col) in buttons:
     ttk.Button(button_frame, text=text, command=command, style = "Custom.TButton",width=8).grid(row=row, column=col, padx= 1, pady= 1, ipady = 30)
 
 # Copyright label
-copyright_label = ttk.Label(window, text="© 2025 ManitB", font=("Arial", 16), foreground="gray", background="#2F4F4F")
+copyright_label = ttk.Label(window, text="© 2025 ManitB", font=("Arial", 16), foreground="darkgray", background="#4A235A")
 copyright_label.pack(side="bottom", pady=25) 
 
 window.mainloop()
