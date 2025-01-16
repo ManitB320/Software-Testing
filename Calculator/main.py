@@ -70,7 +70,7 @@ for (text, row, col) in buttons:
     ttk.Button(button_frame, text=text, command=command, style = "Custom.TButton",width=8).grid(row=row, column=col, padx= 1, pady= 1, ipady = 30)
 
 # Copyright label
-copyright_label = ttk.Label(window, text="© 2025 ManitB", font=("Arial", 16), foreground="darkgray", background="#4A235A")
+copyright_label = ttk.Label(window, text="© 2025 manman", font=("Arial", 16), foreground="darkgray", background="#4A235A")
 copyright_label.pack(side="bottom", pady=25) 
 
 window.mainloop()
